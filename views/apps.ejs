@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <%# Lists all posts if they exist. %>
+        <h1>Users</h1>
+        <% apps.forEach(function (apps) { %>
+        <div class="col-md-3">
+            <%= apps %>
+        </div>
+        <% }) %>
+    </div>
+
+
+</div>
+</body>
+</html>

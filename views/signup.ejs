@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="http://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+
+    <div class="header" id="header">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#js-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <a class="navbar-brand" href="/">
+                <img src="images/DEBLogo.png" alt="Front logo">
+
+            </a>
+            <div class="collapse navbar-collapse" id="js-navbar-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a ng-href="/wow">WoW</a></li>
+                    <li><a ng-href="/csgo">CS:GO</a></li>
+                    <li><a ng-href="/dota">Dota 2</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a ng-href="/lol">League of Legends</a></li>
+                    <li><a ng-href="/ark">Ark</a></li>
+                    <li><a ng-href="/about">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</head>
+
+
+<div class="bg-gulban">
+    <img class="bg-gulban" src="../images/treemoon.jpg">
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <h1 class="text-center hotelgulban animated gulswing" id="hotelgulban"><b><strong>Welcome to the Hotel Gulban</strong></b></h1>
+            <div>
+                <form action="/signup" method="POST" class="form-signin">
+                    <input type="text" name="username" placeholder="Username" required="required" autofocus="autofocus" class="form-control-sgn"/>
+                    <input type="password" name="password" placeholder="Password" required="required" class="form-control-sgn nomargin"/>
+                    <input type="email" name="email" placeholder="Email" required="required" class="form-control-sgn"/>
+                    <textarea name="game" cols ="40" rows="5" placeholder="What games are you interested in playing?" required="required" class="form-control-lg"></textarea>
+                    <textarea name="self" placeholder="Tell us about yourself" required="required" class="form-control-lg"></textarea>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">Apply</button><span class="clearfix"></span>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="mybtn" id="mybtn" title="Go to top"></button>
+
+<script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="javascripts/scrolltopbutton.js"></script>
+</body>
+</html>

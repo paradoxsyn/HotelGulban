@@ -1,0 +1,38 @@
+{
+  "name": "lint",
+  "description": "lint",
+  "main": "",
+  "authors": [
+    "Para <paradoxsyn@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0",
+    "angular": "^1.4.0",
+    "bootstrap": "^3.2.0",
+    "angular-animate": "^1.4.0",
+    "angular-aria": "^1.4.0",
+    "angular-cookies": "^1.4.0",
+    "angular-messages": "^1.4.0",
+    "angular-resource": "^1.4.0",
+    "angular-route": "^1.4.0",
+    "angular-sanitize": "^1.4.0",
+    "angular-touch": "^1.4.0",
+    "gsap": "^1.19.1",
+    "preloadjs": "*",
+    "slick-carousel": "^1.6.0",
+    "passport": "^0.3.2",
+    "mongoose": "^4.9.4",
+    "express": "^4.15.2",
+    "bcrypt": "*"
+  }
+}

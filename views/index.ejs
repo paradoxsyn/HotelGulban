@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <div class="header" id="header">
+        <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#js-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <a class="navbar-brand" href="/">
+                    <img src="images/DEBLogo.png" alt="Front logo">
+                </a>
+                <div class="collapse navbar-collapse" id="js-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="/wow">WoW</a></li>
+                        <li><a href="/csgo">CS:GO</a></li>
+                        <li><a href="/dota">Dota 2</a></li>
+                        <% if (user) { %>
+                        <li><a>User: </a></li>
+                        <li><a><%= user.username%></a></li>
+                        <%}%>
+
+
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <%if (user) {%>
+                        <li><a href="/logout">Logout</a></li>
+                        <%}%>
+                        <li><a href="/lol">League of Legends</a></li>
+                        <li><a href="/ark">Ark</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div>
+        </nav>
+    </div>
+</head>
+<body>
+
+<div class="fullscreen-bg">
+    <video loop muted autoplay poster="../images/beginning.mp4" class="fullscreen-bg__video">
+        <source src="../images/beginning.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- Slider images -->
+<section class="variable slider" id="slider">
+    <div>
+        <img src="../images/Wowscrn.jpg">
+    </div>
+    <div>
+        <img src="../images/Wowscrn3.jpg">
+    </div>
+    <div>
+        <img src="../images/Wowscrn4.jpg">
+    </div>
+    <div>
+        <img src="../images/Wowscrn5.jpg">
+    </div>
+    <div>
+        <img src="../images/Wowscrn6.jpg">
+    </div>
+    <div>
+        <img src="../images/Wowscrn7.jpg">
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <a class="btn btn-lg btn-success" style="font-family: 'Baskerville Old Face'" href="/hotel">
+                <i class="fa fa-flag fa-2x">
+                    <h1 class="text-center"><i><u>HOTEL GULBAN</u></i></h1>
+                </i></a>
+            <div>
+                <form action="/login" method="POST">
+                    <input type="text" name="username" placeholder="Username" required="required" autofocus="autofocus" class="form-control"/>
+                    <input type="password" name="password" placeholder="Password" required="required" class="form-control"/>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">Enter!</button><span class="clearfix"></span>
+                </form>
+            </div>
+            <a href="/signup" class="btn btn-lg btn-info btn-block">Apply</a>
+        </div>
+    </div>
+</div>
+
+<button class="mybtn" id="mybtn" title="Go to top"></button>
+
+<div class="panel-footer" id="panel-footer">
+        <p><span class="glyphicon glyphicon-heart"></span> Theme copyright or other random shit -- CREDITS TO RABBIT MACHINE FOR BACKGROUND </p>
+</div>
+
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+<script src="bower_components/lodash/dist/lodash.compat.js"></script>
+<script src="bower_components/preloadjs/dist/preload.js"></script>
+<script src="bower_components/slick-carousel/slick/slick.js"></script>
+<script src="bower_components/bcrypt/bcrypt.js"></script>
+
+
+<script type="text/javascript">
+        $('.variable').slick({
+            dots: true,
+            infinite: true,
+            centerMode: true,
+            autoplay: true,
+            fade: true,
+            slidesToShow: 1
+            //slidesToScroll: 3
+        });
+</script>
+<script type="text/javascript" src="javascripts/scrolltopbutton.js"></script>
+
+
+</body>
+
+</html>
