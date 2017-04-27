@@ -54,9 +54,15 @@
     </video>
 </h1>
 <!-- Guild news -->
-<section class="variable slider">
+<section class="multiple-items slider" id="slider">
     <div>
-        <img src="../images/Wowscrn.jpg">
+        <img src="../images/seebs.png" class="slick-slide">
+    </div>
+    <div>
+        <img src="../images/gulndan.png" class="slick-slide">
+    </div>
+    <div>
+        <img src="../images/celki.png" class="slick-slide">
     </div>
 </section>
 
@@ -110,15 +116,14 @@
 <script src="bower_components/bcrypt/bcrypt.js"></script>
 
 <script type="text/javascript">
-    $('.variable').slick({
+    $('.multiple-items').slick({
         dots: true,
         infinite: true,
-        centerMode: true,
-        autoplay: true,
-        fade: true,
-        slidesToShow: 2
-        //slidesToScroll: 3
+        //fade: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
     });
+
 </script>
 <script type="text/javascript" src="javascripts/scrolltopbutton.js"></script>
 

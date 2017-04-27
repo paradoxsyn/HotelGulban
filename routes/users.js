@@ -8,15 +8,23 @@ var UserController = require('../controllers/UserController');
  *		If not, redirect the user to the log-in page.
  *	--TODO: MAKE ONLY FOR ADMINS
  */
-var isAuthenticated = function(req, res, next) {
+/*var isAuthenticated = function(req, res, next) {
     if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/');
+};*/
+
+var adminAuth = function(req,res,next) {
+    var user = req.user;
+    if(user.admin == true) {
         return next();
     }
     res.redirect('/');
 };
 
 /* GET users listing. */
-router.get('/', isAuthenticated, function(req, res) {
+router.get('/', adminAuth, function(req, res) {
 
     UserController.listAllUsers(function(err, username) {
 

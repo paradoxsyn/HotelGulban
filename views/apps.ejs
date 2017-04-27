@@ -8,10 +8,16 @@
 <div class="container">
     <div class="row">
         <%# Lists all posts if they exist. %>
-        <h1>Users</h1>
+        <h1>Applications</h1>
         <% apps.forEach(function (apps) { %>
-        <div class="col-md-3">
-            <%= apps %>
+        <br class="col-md-3">
+            <br>Username: <%- user.username %></br>
+            <br>Contact: <%- apps.contact %></br>
+            <br>Raid Times: <%- apps.raidtimes %></br>
+            <br>Roles: <%- apps.roles %></br>
+            <br>Armory: <%- apps.armory %></br>
+            <br>WarcraftLogs: <%- apps.logs %></br>
+            <br>Lint: <%- apps.lint %></br>
         </div>
         <% }) %>
     </div>

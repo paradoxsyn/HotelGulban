@@ -30,6 +30,7 @@ module.exports = function(passport) {
                         newUser.email = req.param('email');
                         newUser.game = req.param('game');
                         newUser.self = req.param('self');
+                        newUser.admin = false;
 
                         // Save the new user.
                         newUser.save(function(err) {

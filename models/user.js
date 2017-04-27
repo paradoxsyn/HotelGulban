@@ -7,6 +7,7 @@ var userSchema = new Schema({
     email: String,
     game: String,
     self: String,
+    admin: Boolean
 });
 
 var User = mongoose.model('User', userSchema);

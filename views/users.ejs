@@ -6,14 +6,15 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
+    <div class="row ">
+        <br>
         <%# Lists all posts if they exist. %>
         <h1>Users</h1>
+        <ul>
         <% user.forEach(function (user) { %>
-        <div class="col-md-3">
-            <%= user.username %>
-        </div>
+            <br>username: <%= user.username %>
         <% }) %>
+        </ul>
     </div>
 
 

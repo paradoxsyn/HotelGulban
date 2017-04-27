@@ -16,7 +16,9 @@ var isAuthenticated = function(req, res, next) {
 /* GET users listing. */
 router.get('/', isAuthenticated, function(req, res) {
     AppController.listAllApps(function(err,apps){
-        res.render('apps', {title:'Applications', apps:apps})
+        res.render('apps', {title:'Applications',
+            apps:apps,
+            user:req.user})
     })
 });
 

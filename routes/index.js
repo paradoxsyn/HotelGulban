@@ -26,8 +26,8 @@ var isAuthenticated = function(req, res, next) {
 
 /** POST handles login. */
 router.post('/login', passport.authenticate('login', {
-    successRedirect: '/home',
-    failureRedirect: '/',
+    successRedirect: '/',
+    failureRedirect: '/home',
     failureFlash : true
 }));
 
